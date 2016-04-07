@@ -46,15 +46,17 @@ modified date : 2016/4/5
 			i = 0,
 			that = this,
 			timeout;
+		/* 空的二叉树 */
 		if (len < 1) {
 			return;
 		}
+		/* 判断是否在运行中 */
 		if (!this.lighting) {
 			this.lighting = true;
+			/* 点亮当前的排序方式 */
 			ele.className = 'active';
 			timeout = window.setInterval(function() {
-				console.log(i);
-				if (i > len - 1) {
+				if (i > len - 1) { /* 最后一个的情况下 */
 					that.nodes[i - 1].style.background = "transparent";
 					that.lighting = false;
 					ele.className = '';
@@ -63,7 +65,7 @@ modified date : 2016/4/5
 					that.nodes[i - 1].style.background = "transparent";
 					that.nodes[i].style.background = "#ff7f66";
 					i++;
-				} else {
+				} else { /* 第一个的情况下 */
 					that.nodes[i].style.background = "#ff7f66";
 					i++;
 				}
