@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+
+</head>
+<body>
+	<div class="selecter">
+		<a href="javascritp:;" id="depthfirst"><span>深度优先</span></a>
+		<a href="javascritp:;" id="breadthfirst"><span>广度优先</span></a>
+	</div>
+	<div class="box page">
+		<div class="box" id="root">
+			<p>num0</p>
+			<div class="box">
+				<p>num1</p>
+				<div class="box">
+					<p>num2</p>
+					<div class="box children">
+						<p>num3</p>
+					</div>
+					<div class="box children">
+						<p>num3</p>
+					</div>
+					<div class="box children">
+						<p>num3</p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="box children">
+						<p>num4</p>
+					</div>
+				</div>
+			</div>
+			<div class="box">
+				<p>num5</p>
+				<div class="box">
+					<p>num6</p>
+					<div class="box children">
+						<p>num7</p>
+					</div>
+					<div class="box children">
+						<p>num4</p>
+					</div>
+				</div>
+				<div class="box">
+					<p>num2</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="selecter">
+		<input type="text" class="search-input" autocomplete="off" value="" placeholder="搜索" />
+		<a href="javascritp:;" id="dfs"><span>深度优先搜索</span></a>
+		<a href="javascritp:;" id="bfs"><span>广度优先搜索</span></a>
+	</div>
+	<p id="tips"></p>
+	<script type="text/javascript" src="assets/js/index.js"></script>
+</body>
+</html>
